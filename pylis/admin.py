@@ -50,7 +50,7 @@ def get_sections(title_number, agency_number, chapter_number):
         headers=_headers)
     return json.loads(r.text)
 
-def get_section_detailss(title_number, agency_number, chapter_number,section_number,section_number_point=0,section_number_colon=0):
+def get_section_details(title_number, agency_number, chapter_number,section_number,section_number_point=0,section_number_colon=0):
     '''
     This service returns the Administratve Section detail by 'titleNumber', 'agencyNumber', 'chapterNumber', 
     'sectionNumber', 'sectionNumberPoint', 'sectionNumberColon' (if no point or colon, pass a 0 for each value)

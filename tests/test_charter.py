@@ -4,7 +4,13 @@ if __name__ == "__main__":
 from pylis import charter
 
 def test_get():
-    charter.get()
+    x = charter.get()
+
+    assert "Name" in x[0]
+    assert "Type" in x[0]
 
 def test_get_details():
-    assert 1 == 0
+    short_name = "chesterfield"
+    x = charter.get_details(short_name)
+
+    assert x["ShortName"] == short_name
